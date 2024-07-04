@@ -12,7 +12,7 @@ function Update() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getuser/" + id)
+      .get("https://crud-mern-server-seven.vercel.app/getuser/" + id)
       .then((res) => {
         console.log(res);
         setName(res.data.name);
@@ -24,7 +24,7 @@ function Update() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/update/"+id, { name, age, phone })
+      .put("https://crud-mern-server-seven.vercel.app/update/"+id, { name, age, phone })
       .then((res) => {
         console.log("Form data updated successfully:", res.data);
         navigate("/");
