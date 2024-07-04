@@ -10,7 +10,7 @@ function Add() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/post", { name, age, phone })
+      .post("https://crud-mern-server-seven.vercel.app/post", { name, age, phone })
       .then((res) => {
         console.log("Form data submitted successfully:", res.data);
         navigate("/"); 
